@@ -1,6 +1,9 @@
 ---
 # Target directory to where Composer will be installed.
-composer_path: /usr/local/bin/composer
+liara_composer_path: /usr/local/bin/composer
+
+# Path to user Composer directory.
+liara_composer_user_dir: /home/vagrant/.composer
 
 # Path to Composer vendor binaries.
-composer_bin_dir: /home/vagrant/.composer/vendor/bin
+liara_composer_bin_dir: {{ liara_composer_user_dir }}/vendor/bin

@@ -1,19 +1,19 @@
 ---
 - name: Install Composer
   sudo: yes
-  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin creates={{ composer_path }}
+  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin creates={{ liara_composer_path }}
   tags:
     - composer
 
 - name: Rename Composer Executable
   sudo: yes
-  shell: mv /usr/local/bin/composer.phar {{ composer_path }} creates={{ composer_path }}
+  shell: mv /usr/local/bin/composer.phar {{ liara_composer_path }} creates={{ liara_composer_path }}
   tags:
     - composer
 
 - name: Make Composer Executable
   sudo: yes
-  command: chmod a+x {{ composer_path }} creates={{ composer_path }}
+  command: chmod a+x {{ liara_composer_path }} creates={{ liara_composer_path }}
   tags:
     - composer
 
@@ -24,4 +24,4 @@
     - composer
   lineinfile: regexp='PATH=(["]*)((?!.*?{{item}}).*?)(["]*)$' line="PATH=\1\2:{{item}}\3" dest=/etc/environment backrefs=yes
   with_items:
-    - {{ composer_bin_dir }}
+    - {{ liara_composer_bin_dir }}

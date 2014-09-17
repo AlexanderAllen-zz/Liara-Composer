@@ -1,4 +1,4 @@
-Composer
+Liara/Composer
 =============
 
 Ansible role for installing Composer.
@@ -17,10 +17,10 @@ to `composer_bin_dir` available to the environment through `/etc/environment`.
 Variables specified in `vars/main.yml`:
 
     # Path to the Composer executable.
-    composer_path: /usr/local/bin/composer
+    liara_composer_path: /usr/local/bin/composer
 
     # Path to Composer vendor binaries.
-    composer_bin_dir: /home/vagrant/.composer/vendor/bin
+    liara_composer_bin_dir: /home/vagrant/.composer/vendor/bin
 
 Dependencies
 ------------
@@ -30,17 +30,15 @@ Dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: webservers
       roles:
-         - { role: AlexanderAllen.Composer }
+         - { role: AlexanderAllen.Liara-Composer }
 
 Inside `vars/main.yml`:
 
     ---
-    composer_path: /usr/local/bin/composer
-    composer_bin_dir: /home/myusername/.composer/vendor/bin
+    liara_composer_path: /usr/local/bin/composer
+    liara_composer_bin_dir: /home/myusername/.composer/vendor/bin
 
 License
 -------
