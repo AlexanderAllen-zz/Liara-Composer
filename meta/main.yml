@@ -9,3 +9,6 @@ galaxy_info:
   - development
   - web
 
+dependencies:
+  - AlexanderAllen.Liara
+
