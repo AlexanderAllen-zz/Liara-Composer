@@ -34,7 +34,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: webservers
       roles:
-         - { role: AlexanderAllen.composer }
+         - { role: AlexanderAllen.Composer }
 
 Inside `vars/main.yml`:
 
