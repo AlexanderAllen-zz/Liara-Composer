@@ -6,4 +6,4 @@ liara_composer_path: /usr/local/bin/composer
 liara_composer_user_dir: /home/vagrant/.composer
 
 # Path to Composer vendor binaries.
-liara_composer_bin_dir: {{ liara_composer_user_dir }}/vendor/bin
+liara_composer_bin_dir: "{{ liara_composer_user_dir }}/vendor/bin"
