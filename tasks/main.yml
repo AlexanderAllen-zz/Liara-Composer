@@ -24,4 +24,4 @@
     - composer
   lineinfile: regexp='PATH=(["]*)((?!.*?{{item}}).*?)(["]*)$' line="PATH=\1\2:{{item}}\3" dest=/etc/environment backrefs=yes
   with_items:
-    - {{ liara_composer_bin_dir }}
+    - "{{ liara_composer_bin_dir }}"
